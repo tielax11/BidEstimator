@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import json
 
 def create_training_weights(filename):
     """
@@ -12,34 +13,12 @@ def create_training_weights(filename):
     Returns:
         None
     """
-    weights = {
-        "Level of Detail": {
-            "Background": 0.75,
-            "Foreground": 1,
-            "Hero": 1.25
-        },
-        "Type": {
-            "Shot": 0.75,
-            "Dev": 1,
-            "Dev+Shot": 1.25
-        },
-        "Artist Level": {
-            "Junior": 1.5,
-            "Mid": 0.75,
-            "Senior": 0.67,
-            "Supervisor": 0.32
-        },
-        "Tag": {
-            "explosion": 5,
-            "spark": 1,
-            "water": 10,
-            "smoke": 3
-        }
-    }
+    with open('examples/basic_weights.json') as f:
+        weights = json.load(f)
 
     examples = []
 
-    for _ in range(1000):
+    for _ in range(10000):
         level_of_detail = random.choice(list(weights["Level of Detail"].keys()))
         type_ = random.choice(list(weights["Type"].keys()))
         artist_level = random.choice(list(weights["Artist Level"].keys()))
