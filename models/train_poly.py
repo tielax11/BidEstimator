@@ -40,9 +40,6 @@ coefficients = model.coef_
 # Predict the target values using the model
 y_pred = model.predict(X_poly)
 
-# Print the predicted data
-print('Predicted data:', y_pred)
-
 # Compute the accuracy as the mean squared error between the true and predicted values
 accuracy = mean_squared_error(y, y_pred)
 print('Accuracy:', accuracy)
