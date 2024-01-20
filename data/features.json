@@ -1,0 +1,6 @@
+{
+    "Level of Detail": ["Background", "Foreground", "Hero"],
+    "Type": ["Shot", "Dev", "Dev+Shot"],
+    "Artist Level": ["Junior", "Mid", "Senior", "Supervisor"],
+    "Tag": ["explosion", "sparks", "water", "smoke"]
+}
